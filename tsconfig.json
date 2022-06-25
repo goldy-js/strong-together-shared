@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "allowJs": true,
+    "declarationMap": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "strictPropertyInitialization": false,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "outDir": "lib",
+    "experimentalDecorators": true,
+    "rootDirs": ["src"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
+}

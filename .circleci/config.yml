@@ -1,0 +1,28 @@
+version: 2.1
+orbs:
+  node: circleci/node@5.0.0
+
+jobs:
+  release:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run: npm run build
+      - run: npx semantic-release --access=public
+
+workflows:
+  smooth:
+    jobs:
+      - node/test:
+          # This is the node version to use for the `cimg/node` tag
+          # Relevant tags can be found on the CircleCI Developer Hub
+          # https://circleci.com/developer/images/image/cimg/node
+          version: "16.10"
+          pkg-manager: npm
+
+      - release:
+          requires:
+            - node/test
+          context:
+            - npm-semantic-release
