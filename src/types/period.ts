@@ -1,3 +1,3 @@
 import { PERIODS } from "../constants/constants"
 
-export type IPeriod = typeof PERIODS[number]
+export type ISharedPeriod = typeof PERIODS[number]
