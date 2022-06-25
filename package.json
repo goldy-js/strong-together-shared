@@ -1,6 +1,6 @@
 {
   "name": "@goldyjs/strong-together-shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "LICENSE": "MIT",
   "description": "Shared Biz Logic For Strong Together",
   "main": "lib/index.js",
