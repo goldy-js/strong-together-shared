@@ -71,7 +71,7 @@ export default class DailyEntriesBonusCalcService extends Service {
 
     const isEligible = CORE_ACTIVITIES.every(
       (activity) =>
-        byActivity[activity]
+        (byActivity[activity] || [])
           .map((entry) => entry.count)
           .reduce((acc, count) => acc + count, 0) >= 5,
     )
@@ -92,7 +92,7 @@ export default class DailyEntriesBonusCalcService extends Service {
 
     const isEligible = CORE_ACTIVITIES.every(
       (activity) =>
-        byActivity[activity]
+        (byActivity[activity] || [])
           .map((entry) => entry.count)
           .reduce((acc, count) => acc + count, 0) >= 10,
     )
@@ -113,7 +113,7 @@ export default class DailyEntriesBonusCalcService extends Service {
 
     const isEligible = CORE_ACTIVITIES.every(
       (activity) =>
-        byActivity[activity]
+        (byActivity[activity] || [])
           .map((entry) => entry.count)
           .reduce((acc, count) => acc + count, 0) >= 15,
     )
