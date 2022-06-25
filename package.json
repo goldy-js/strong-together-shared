@@ -1,6 +1,6 @@
 {
   "name": "@goldyjs/strong-together-shared",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "LICENSE": "MIT",
   "description": "Shared Biz Logic For Strong Together",
   "main": "lib/index.js",
@@ -26,6 +26,7 @@
     "build": "npm run build:js && npm run build:types",
     "build:js": "babel src -d lib --source-maps --extensions '.ts'",
     "build:types": "tsc --emitDeclarationOnly",
+    "prepub": "npm run build",
     "pub": "npm publish --access public",
     "test": "jest --runInBand",
     "t:w": "npm run test:w",
